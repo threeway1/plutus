@@ -1,0 +1,188 @@
+@import 'common';
+
+// 공통
+.btn {
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    border-radius: 0;
+    background: none;
+    &:hover, &:focus {
+        color: inherit;
+    }
+    @media(min-width: $md) {
+        font-size: 14px;
+    }
+}
+.btn-more {
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    padding: 0 30px 5px 0;
+    border-bottom: 1px solid #fff;
+    @include transition();
+    &:after {
+        position: absolute;
+        bottom: 3px;
+        right: -1px;
+        padding: 0;
+        width: 10px;
+        height: 1px;
+        content: "";
+        transform: rotate(50deg);
+        background-color: #fff;
+        @include transition();
+    }
+    @media(min-width: $md) {
+        padding: 0 64px 10px 0;
+        &:after {
+            bottom: 4px;
+            right: -1px;
+            width: 12px;
+        }
+    }
+}
+
+// jumbotron
+.jumbotron {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    ul {
+        li {
+            padding: 110px 0 50px;
+            /*height: 500px;*/
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            .product-info {
+                position: relative;
+                display: table;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                .details {
+                    display: table-cell;
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    vertical-align: top;
+                    small {
+                        font-size: 14px;
+                        font-weight: lighter;
+                        letter-spacing: 1px;
+                        display: block;
+                        color: rgba(#fff, .8);
+                    }
+                    h4 {
+                        font-size: 45px;
+                        font-weight: bold;
+                        font-style: italic;
+                        @include noto-sr();
+                    }
+                    .btn-area {
+                        margin-top: 20px;
+                        .btn-more {
+                            
+                        }
+                    }
+                    figure {
+                        padding: 0 10%;
+                        margin-top: 30px;
+                        background-image: url(/assets/images/main/bg_figure_xs.png);
+                        background-position: 50% 50%;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        .img-fluid {
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        ul {
+            li {
+                padding: 200px 0 100px;
+                .product-info {
+                    .details {
+                        small {
+                            font-size: 26px;
+                        }
+                        h4 {
+                            display: inline-block;
+                            font-size: 72px;
+                        }
+                        .btn-area {
+                            display: inline-block;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $lg) {
+        ul {
+            li {
+                padding-top: 250px;
+                .product-info {
+                    .details {
+                        small {
+                            font-size: 26px;
+                        }
+                        h4 {
+                            font-size: 72px;
+                        }
+                        .btn-area {
+                            margin-top: 50px;
+                        }
+                        figure {
+                            background-image: url(/assets/images/main/bg_figure_xl.png);
+                            background-size: 955px auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
