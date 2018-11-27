@@ -364,7 +364,7 @@ a {
 
 @media (min-width: 1200px) {
   .container {
-    min-width: 1200px !important; } }
+    min-width: 1170px !important; } }
 
 body {
   position: relative;

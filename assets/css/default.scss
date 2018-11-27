@@ -8,8 +8,6 @@
     width: 100%;
     z-index: 100;
     height: 92px;
-    border-bottom: 1px solid #ccc;
-    background-color: rgba(#000, .7);
     @include transition();
     .container {
         position: relative;
@@ -17,16 +15,14 @@
             position: absolute;
             top: 0;
             left: 50%;
+            width: 60px;
+            height: 60px;
             font-size: 0;
             z-index: 1;
             margin: 15px 0;
             margin-left: -30px;
             a {
                 display: block;
-                img {
-                    width: 60px;
-                    @include transition();
-                }
             }
         }
         .btn {
@@ -42,10 +38,77 @@
                 float: left;
             }
             &.search-open {
+                position: relative;
+                z-index: 102;
                 float: right;
             }
             &.btn-sitemap {
+                position: relative;
+                z-index: 102;
                 display: none;
+            }
+        }
+        .global-search {
+            .search-open {
+                i {
+                    &.icon-search {
+                        display: block;
+                    }
+                    &.icon-cancel {
+                        display: none;
+                    }
+                }
+                &.search-close {
+                    i {
+                        &.icon-search {
+                            display: none;
+                        }
+                        &.icon-cancel {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .form-group {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 101;
+                padding-left: 50%;
+                padding-right: 40px;
+                width: 100%;
+                max-width: 1200px;
+                text-align: right;
+                margin: 30px auto 31px;
+                .form-control {
+                    position: relative;
+                    width: 100%;
+                    height: 30px;
+                    border: 1px solid #fff;
+                    border-radius: 0;
+                    padding-right: 35px;
+                    display: inline-block;
+                }
+                .btn-search {
+                    position: absolute;
+                    top: 0;
+                    right: 40px;
+                    margin: 0;
+                    color: #3e6dc2;
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .container {
+            .global-search {
+                .form-group {
+                    padding-left: 65%;
+                    padding-right: 50px;
+                    .btn-search {
+                        right: 50px;
+                    }
+                }
             }
         }
     }
@@ -53,13 +116,9 @@
         height: 163px;
         .container {
             .logo {
+                width: 112px;
                 margin: 25px 0;
-                margin-left: -56px;
-                a {
-                    img {
-                        width: 112px;
-                    }
-                }
+                margin-left: -65px;
             }
             .btn {
                 margin: 66px 0;
@@ -68,6 +127,12 @@
                 }
                 &.btn-nav {
                     display: none;
+                }
+            }
+            .global-search {
+                .form-group {
+                    padding-left: 75%;
+                    margin: 66px 0;
                 }
             }
             // gnb
@@ -171,7 +236,7 @@
         > ul {
             > li {
                 position: relative;
-                z-index: 100;
+                /*z-index: 100;*/
                 height: 374px;
                 overflow: visible;
                 > a {
@@ -299,7 +364,6 @@
         }
     }
 }
-
 .opened {
     overflow: hidden;
     #gnb-nav {
@@ -311,28 +375,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-#content {
-    width: 100%;
-    height: 400px;
-}
-
-
-
-
-
-
-
-
-
 
 // footer 
 #footer {
@@ -446,48 +488,42 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// quick-top
+.quick-top {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    opacity: 0;
+    @include transition();
+    > .btn-top {
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 13px;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        border: 0;
+        border-radius: 50%;
+        background-color: #3e6dc2;
+    }
+    @media(min-width: $lg) {
+        width: 1170px;
+        margin-left: -585px;
+        > .btn-top {
+            float: right;
+            width: 60px;
+            height: 60px;
+            font-size: 16px;
+            padding: 14px 0;
+        }
+    }
+}
+.scrolled {
+    .quick-top {
+        opacity: 1;
+    }
+    #header {
+        background-color: rgba(#000, .7);
+    }
+}
