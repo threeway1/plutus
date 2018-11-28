@@ -15,15 +15,13 @@
                     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/introduction/_lnb.php'); ?>
                 </div>
                 <div class="col-12 col-xl-9">
-                    <section class="greeging">
+                    <section class="greeting">
                         <div class="section-header">
                             <h4>인사말</h4>
                         </div>
                         <!-- Content Start -->
                         <div class="section-content">
-
-
-
+                            
                         </div>
                     </section>
                 </div>

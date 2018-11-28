@@ -1,10 +1,10 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/inc/dochead.php'); ?>
 <link rel="stylesheet" href="/assets/css/sub.css">
-<link rel="stylesheet" href="/assets/css/introduction.css">
+<link rel="stylesheet" href="/assets/css/other.css">
 </head>
-<body class="sub introduction">
+<body class="sub other">
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/inc/header.php'); ?>
-    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/introduction/_page_header.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/other/_page_header.php'); ?>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/inc/_snb.php'); ?>
     
     <!-- Content -->
@@ -12,19 +12,18 @@
         <div class="container">
             <div class="row">
                 <div class="d-none d-xl-block col-xl-3">
-                    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/introduction/_lnb.php'); ?>
+                    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/other/_lnb.php'); ?>
                 </div>
                 <div class="col-12 col-xl-9">
-                    <section class="group">
+                    <section class="privacy">
                         <div class="section-header">
-                            <h4>조직도</h4>
+                            <h4>개인정보취급방침</h4>
                         </div>
                         <!-- Content Start -->
                         <div class="section-content">
-                            <figure>
-                                <img src="/assets/images/introduction/img_group_sm.png" class="img-fluid d-lg-none" alt="">
-                                <img src="/assets/images/introduction/img_group_xl.png" class="img-fluid d-none d-lg-block" alt="">
-                            </figure>
+                            
+
+
                         </div>
                     </section>
                 </div>

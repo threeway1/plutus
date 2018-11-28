@@ -5,3 +5,235 @@
         background-image: url(/assets/images/introduction/bg_page_header.jpg);
     }
 }
+
+// 조직도
+.group {
+    .section-content {
+        padding: 40px 0;
+        background-color: #f2f2f2;
+        figure {
+            .img-fluid {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    @media(min-width: $lg) {
+        padding: 60px 0;
+    }
+}
+
+// 오시는길
+.location {
+    .section-content {
+        .maps {
+            width: 100%;
+            .wrap_map {
+                height: 340px;
+            }
+        }
+        .location-info {
+            margin-top: 30px;
+            ul {
+                > li {
+                    > dl {
+                        display: table;
+                        width: 100%;
+                        table-layout: fixed;
+                        > dt {
+                            width: 70px;
+                            font-size: 12px;
+                            color: #333;
+                            line-height: 20px;
+                            font-weight: 400;
+                            display: table-cell;
+                            vertical-align: top;
+                        }
+                        > dd {
+                            font-size: 12px;
+                            color: #666;
+                            line-height: 20px;
+                            font-weight: 400;
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            .btn-area {
+                text-align: center;
+                font-size: 0;
+                margin-top: 20px;
+                .btn {
+                    border-radius: 0;
+                    padding: 0;
+                    height: 40px;
+                    line-height: 38px;
+                    width: 49.5%;
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-right: 1%;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    img {
+                        margin-right: 15px;
+                    }
+                    &.btn-blue {
+                        color: #fff;
+                        border: 1px solid #3e6dc2;
+                        background-color: #3e6dc2;
+                    }
+                    &.btn-white {
+                        color: #3e6dc2;
+                        border: 1px solid #3e6dc2;
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .section-content {
+            .maps {
+                .wrap_map {
+                    height: 400px;
+                }
+            }
+            .location-info {
+                margin-top: 45px;
+                ul {
+                    > li {
+                        > dl {
+                            > dt {
+                                width: 80px;
+                                font-size: 14px;
+                                line-height: 30px;
+                            }
+                            > dd {
+                                font-size: 14px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+                .btn-area {
+                    margin-top: 30px;
+                    .btn {
+                        font-size: 16px;
+                        height: 50px;
+                        line-height: 48px;
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $lg) {
+        .section-content {
+            .location-info {
+                margin-top: 35px;
+                .btn-area {
+                    text-align: right;
+                    margin-top: 0;
+                    .btn {
+                        width: 160px;
+                        font-size: 16px;
+                        height: 65px;
+                        line-height: 63px;
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// greeting
+.history-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    small {
+        font-size: 16px;
+        color: #3e6dc2;
+        @include noto-sr();
+    }
+    h5 {
+        font-size: 20px;
+        color: #29303b;
+        margin-top: 10px;
+        font-weight: 300;
+        strong {
+            font-weight: bold;
+            &.blue {
+                color: #3e6dc2;
+            }
+        }
+    }
+    p {
+        font-size: 13px;
+        color: #666;
+        line-height: 20px;
+        margin-top: 15px;
+        word-break: keep-all;
+    }
+    @media(min-width: $md) {
+        small {
+            
+        }
+        h5 {
+            
+        }
+        p {
+            
+        }
+    }
+    @media(min-width: $lg) {
+        text-align: left;
+        small {
+            font-size: 20px;
+        }
+        h5 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: -.5px;
+        }
+    }
+    @media(min-width: $xl) {
+        figure {
+            right: -15px;
+            .img-fluid {
+                width: auto;
+            }
+        }
+    }
+}
+.history {
+    .section-content {
+        position: relative;
+        min-height: 600px;
+        figure {
+            display: none;
+        }
+        @media(min-width: $lg) {
+            figure {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                .img-fluid {
+                    width: 250px;
+                }
+            }
+        }
+        @media(min-width: $xl) {
+            figure {
+                right: -15px;
+                .img-fluid {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

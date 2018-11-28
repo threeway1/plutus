@@ -43,6 +43,7 @@
                     <a href="/introduction/greeting.php">회사소개<span></span></a>
                     <ul>
                         <li><a href="/introduction/greeting.php">인사말</a></li>
+                        <li><a href="/introduction/history.php">연혁</a></li>
                         <li><a href="/introduction/group.php">조직도</a></li>
                         <li><a href="/introduction/location.php">오시는 길</a></li>
                     </ul>
@@ -90,6 +91,7 @@
                     <a href="#">회사소개</a>
                     <ul>
                         <li><a href="/introduction/greeting.php">인사말</a></li>
+                        <li><a href="/introduction/history.php">연혁</a></li>
                         <li><a href="/introduction/group.php">조직도</a></li>
                         <li><a href="/introduction/location.php">오시는 길</a></li>
                     </ul>

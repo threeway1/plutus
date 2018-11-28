@@ -4,7 +4,7 @@
 
 $md: "768px";
 $lg: "992px";
-$xl: "1200px";
+$xl: "1230px";
 
 @mixin transition($property: all, $duration: .15s, $timing: linear, $delay: 0s) {
 	-webkit-transition-property: $property;
@@ -126,7 +126,7 @@ a {
 
 .container {
     @media(min-width: $xl) {
-        min-width: 1170px !important;
+        min-width: 1200px !important;
     }
 }
 

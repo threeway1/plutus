@@ -362,9 +362,9 @@ a {
           padding-left: 15px;
           padding-right: 15px; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1230px) {
   .container {
-    min-width: 1170px !important; } }
+    min-width: 1200px !important; } }
 
 body {
   position: relative;

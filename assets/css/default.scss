@@ -11,6 +11,7 @@
     @include transition();
     .container {
         position: relative;
+        overflow: hidden;
         .logo {
             position: absolute;
             top: 0;
@@ -35,20 +36,25 @@
             margin: 30px 0 31px;
             background: none;
             &.btn-nav, &.btn-sitemap {
-                float: left;
+                /*float: left;*/
             }
             &.search-open {
                 position: relative;
                 z-index: 102;
-                float: right;
+                /*float: right;*/
             }
             &.btn-sitemap {
                 position: relative;
                 z-index: 102;
                 display: none;
+                padding-top: 6px;
             }
         }
+        .site-map {
+            float: left;
+        }
         .global-search {
+            float: right;
             .search-open {
                 i {
                     &.icon-search {
@@ -172,9 +178,6 @@
                                 }
                             }
                         }
-                        &:hover {
-                            
-                        }
                         &:nth-of-type(2) {
                             padding-right: 140px;
                         }
@@ -207,7 +210,8 @@
 }
 
 #header.gnb-open {
-    height: 374px;
+    /*height: 374px !important;*/
+    height: 464px !important;
     border-bottom: 1px solid #353d47;
     background-color: rgba(#000, .7);
     &:after {
@@ -216,8 +220,12 @@
         left: 0;
         display: block;
         width: 100%;
+        z-index: -1;
         content: "";
         border-bottom: 1px solid #353d47;
+    }
+    .container {
+        overflow: visible !important;
     }
     .logo {
         margin-top: 25px;
@@ -236,8 +244,8 @@
         > ul {
             > li {
                 position: relative;
-                /*z-index: 100;*/
-                height: 374px;
+                /*height: 374px;*/
+                height: 464px;
                 overflow: visible;
                 > a {
                     margin-bottom: 0;
@@ -250,6 +258,52 @@
         }
     }
 }
+// scroll event
+.scrolled {
+    .quick-top {
+        opacity: 1;
+    }
+    #header {
+        background-color: rgba(#000, .7);
+        .container {
+            overflow: hidden;
+        }
+    }
+    @media(min-width: $lg) {
+        #header {
+            height: 120px;
+            border-bottom: 0;
+            .logo {
+                margin-top: 25px;
+                margin-left: -54px;
+                z-index: 1;
+                > a {
+                    > img {
+                        width: 86px;
+                    }
+                }
+            }
+        }
+        #gnb {
+            > ul {
+                > li {
+                    position: relative;
+                    /*height: 374px;*/
+                    height: 464px;
+                    overflow: visible;
+                    > a {
+                        margin-bottom: 0 !important;
+                        padding-bottom: 26px !important;
+                    }
+                    > ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 // gnb
@@ -451,6 +505,7 @@
             font-size: 0;
             img {
                 display: block;
+                width: 100px;
             }
         }
         .foot-nav {
@@ -482,6 +537,11 @@
         }
     }
     @media(min-width: $xl) {
+        h2 {
+            img {
+                width: auto;
+            }
+        }
         .col-md-9 {
             padding-left: 45px;
         }
@@ -491,8 +551,9 @@
 // quick-top
 .quick-top {
     position: fixed;
-    right: 30px;
-    bottom: 100px;
+    right: 10px;
+    bottom: 60px;
+    z-index: 1;
     opacity: 0;
     @include transition();
     > .btn-top {
@@ -506,10 +567,14 @@
         border: 0;
         border-radius: 50%;
         background-color: #3e6dc2;
+        &:hover, &:focus {
+            color: #fff;
+        }
     }
-    @media(min-width: $lg) {
-        width: 1170px;
-        margin-left: -585px;
+    @media(min-width: 1430px) {
+        width: 1400px;
+        margin-right: -700px;
+        right: 50%;
         > .btn-top {
             float: right;
             width: 60px;
@@ -517,13 +582,5 @@
             font-size: 16px;
             padding: 14px 0;
         }
-    }
-}
-.scrolled {
-    .quick-top {
-        opacity: 1;
-    }
-    #header {
-        background-color: rgba(#000, .7);
     }
 }
