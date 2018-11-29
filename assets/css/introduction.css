@@ -513,17 +513,117 @@ body {
   .history .section-content figure {
     display: none; }
   @media (min-width: 992px) {
-    .history .section-content figure {
+    .history .section-content .section-content figure {
       position: absolute;
-      top: 0;
+      top: 20px;
       right: 0;
       display: block; }
-      .history .section-content figure .img-fluid {
-        width: 250px; } }
+      .history .section-content .section-content figure img {
+        width: 400px; } }
+  @media (min-width: 1200px) {
+    .history .section-content .section-content figure {
+      right: -15px;
+      top: 60px; }
+      .history .section-content .section-content figure img {
+        width: 310px; } }
   @media (min-width: 1230px) {
-    .history .section-content figure {
-      right: -15px; }
-      .history .section-content figure .img-fluid {
+    .history .section-content .section-content figure {
+      top: 15px; }
+      .history .section-content .section-content figure img {
         width: auto; } }
+
+.greeting .section-content {
+  position: relative; }
+  .greeting .section-content figure {
+    display: none; }
+  .greeting .section-content small {
+    font-size: 15px;
+    color: #3e6dc2;
+    font-family: 'Noto Serif KR', sans-serif; }
+  .greeting .section-content h5 {
+    color: #29303b;
+    font-size: 20px;
+    letter-spacing: -.5px;
+    font-weight: 300;
+    margin: 10px 0 15px; }
+    .greeting .section-content h5 strong {
+      font-weight: bold; }
+      .greeting .section-content h5 strong.blue {
+        color: #3e6dc2; }
+  .greeting .section-content p {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -.5px;
+    word-break: keep-all; }
+    .greeting .section-content p i {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      color: #888; }
+    .greeting .section-content p span {
+      color: #3e6dc2;
+      text-decoration: underline; }
+  .greeting .section-content dl {
+    overflow: hidden;
+    margin-top: 20px; }
+    .greeting .section-content dl dt {
+      float: left;
+      font-size: 15px;
+      color: #666;
+      margin-top: 7px;
+      font-weight: 400;
+      margin-right: 10px; }
+    .greeting .section-content dl dd {
+      display: inline-block;
+      font-size: 20px;
+      color: #333;
+      font-weight: bold; }
+@media (min-width: 768px) {
+  .greeting .section-content small {
+    font-size: 17px; }
+  .greeting .section-content h5 {
+    font-size: 25px;
+    margin: 15px 0 20px; }
+  .greeting .section-content p {
+    font-size: 14px;
+    line-height: 20px; }
+    .greeting .section-content p i {
+      font-size: 15px; }
+  .greeting .section-content dl {
+    margin-top: 30px; }
+    .greeting .section-content dl dt {
+      font-size: 17px; }
+    .greeting .section-content dl dd {
+      font-size: 23px; } }
+@media (min-width: 992px) {
+  .greeting .section-content figure {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: block; }
+    .greeting .section-content figure img {
+      width: 400px; }
+  .greeting .section-content small {
+    font-size: 20px; }
+  .greeting .section-content h5 {
+    font-size: 32px; }
+  .greeting .section-content p {
+    font-size: 15px;
+    line-height: 24px; }
+    .greeting .section-content p i {
+      font-size: 17px; } }
+@media (min-width: 1200px) {
+  .greeting .section-content figure {
+    right: -15px;
+    top: 60px; }
+    .greeting .section-content figure img {
+      width: 310px; } }
+@media (min-width: 1230px) {
+  .greeting .section-content figure {
+    top: 15px; }
+    .greeting .section-content figure img {
+      width: auto; } }
 
 /*# sourceMappingURL=introduction.css.map */

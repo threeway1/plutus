@@ -4,4 +4,10 @@
     .page-header {
         background-image: url(/assets/images/customer/bg_page_header.jpg);
     }
+    main {
+        padding-bottom: 30px;
+        @media(min-width: $lg) {
+            padding-bottom: 100px;
+        }
+    }
 }

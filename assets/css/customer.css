@@ -377,5 +377,10 @@ body {
 
 .customer .page-header {
   background-image: url(/assets/images/customer/bg_page_header.jpg); }
+.customer main {
+  padding-bottom: 30px; }
+  @media (min-width: 992px) {
+    .customer main {
+      padding-bottom: 100px; } }
 
 /*# sourceMappingURL=customer.css.map */

@@ -364,6 +364,7 @@
                         padding: 0 20px;
                         border-bottom: 1px solid #e0e0e0;
                         &:after {
+                            margin-top: 19px;
                             float: right;
                             content: url(/assets/images/icon_up.jpg);
                         }
@@ -563,7 +564,7 @@
         font-size: 13px;
         color: #fff;
         text-align: center;
-        padding: 8px 0;
+        padding: 12px 0;
         border: 0;
         border-radius: 50%;
         background-color: #3e6dc2;
@@ -580,7 +581,7 @@
             width: 60px;
             height: 60px;
             font-size: 16px;
-            padding: 14px 0;
+            padding: 20px 0;
         }
     }
 }

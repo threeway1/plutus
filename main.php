@@ -222,8 +222,7 @@
                             뉴스&amp;공지 게시판에 게시물이 노출될 예정입니다.
                         </a>
                         <a href="#" class="more d-none d-md-block">
-                            더보기
-                            <span><img src="/assets/images/main/bg_btn_more.jpg" alt="icon-more"></span>
+                            더보기<span class="icon-more"></span>
                         </a>
                     </dd>
                 </dl>
@@ -236,9 +235,7 @@
                 <ul class="row">
                     <li class="col-4">
                         <a href="#">
-                            <figure>
-                                <img src="/assets/images/main/icon_quick01.png" class="img-fluid" alt="">
-                            </figure>
+                            <div class="quick-icon"></div>
                             <div class="details">
                                 <h5>온라인문의</h5>
                                 <p>플루투스로 오시는 길을 자세히 <br>설명하여 드리겠습니다.</p>
@@ -248,9 +245,7 @@
                     </li>
                     <li class="col-4">
                         <a href="#">
-                            <figure>
-                                <img src="/assets/images/main/icon_quick02.png" class="img-fluid" alt="">
-                            </figure>
+                            <div class="quick-icon"></div>
                             <div class="details">
                                 <h5>온라인 카다로그</h5>
                                 <p>플루투스 카다로그를 한 눈에 <br>확인하실 수 있습니다.</p>
@@ -260,9 +255,7 @@
                     </li>
                     <li class="col-4">
                         <a href="#">
-                            <figure>
-                                <img src="/assets/images/main/icon_quick03.png" class="img-fluid" alt="">
-                            </figure>
+                            <div class="quick-icon"></div>
                             <div class="details">
                                 <h5>오시는 길</h5>
                                 <p>플루투스로 오시는 길을 자세히 <br>설명하여 드리겠습니다.</p>

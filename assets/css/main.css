@@ -836,18 +836,25 @@ body {
             line-height: 34px;
             font-size: 14px;
             color: #3e6dc2; }
-            .news-list dl dd > a.more span {
+            .news-list dl dd > a.more .icon-more {
+              position: relative;
+              top: 4px;
               display: inline-block;
               width: 53px;
-              text-align: right;
-              line-height: 20px;
+              height: 20px;
               margin-left: 10px;
-              padding-right: 8px;
-              background-color: #3e6dc2; }
-              .news-list dl dd > a.more span img {
-                position: relative;
-                top: -3px;
-                display: inline-block; } }
+              background-color: #3e6dc2;
+              background-image: url(/assets/images/main/bg_btn_more.jpg);
+              background-size: auto auto;
+              background-repeat: no-repeat;
+              background-position: 22px 50%;
+              /*line-height: 20px;*/
+              /*padding-right: 8px;*/
+              /*img {
+                  position: relative;
+                  top: -3px;
+                  display: inline-block;
+              }*/ } }
   @media (min-width: 992px) {
     .news-list {
       padding: 60px 0;
@@ -868,22 +875,18 @@ body {
   .quick-menu ul > li > a {
     display: block;
     text-align: center; }
-    .quick-menu ul > li > a > figure {
-      overflow: hidden;
+    .quick-menu ul > li > a .quick-icon {
       display: block;
       width: 60px;
       height: 60px;
-      line-height: 58px;
       text-align: center;
       border-radius: 50%;
       margin: 0 auto;
       border: 1px solid #bfcce5;
-      background-color: #fff; }
-      .quick-menu ul > li > a > figure .img-fluid {
-        display: inline-block;
-        transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        -webkit-transform: scale(0.6); }
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 60% auto; }
     .quick-menu ul > li > a > .details h5 {
       font-size: 14px;
       font-weight: 300;
@@ -894,20 +897,22 @@ body {
       display: none; }
     .quick-menu ul > li > a:hover, .quick-menu ul > li > a:focus {
       color: inherit; }
+  .quick-menu ul > li:nth-of-type(1) > a .quick-icon {
+    background-image: url(/assets/images/main/icon_quick01.png); }
+  .quick-menu ul > li:nth-of-type(2) > a .quick-icon {
+    background-image: url(/assets/images/main/icon_quick02.png); }
+  .quick-menu ul > li:nth-of-type(3) > a .quick-icon {
+    background-image: url(/assets/images/main/icon_quick03.png); }
   @media (min-width: 768px) {
     .quick-menu {
       text-align: center;
       padding: 0 0 60px; }
       .quick-menu ul > li > a {
         display: inline-block; }
-        .quick-menu ul > li > a > figure {
+        .quick-menu ul > li > a .quick-icon {
           width: 120px;
           height: 120px;
-          line-height: 118px; }
-          .quick-menu ul > li > a > figure .img-fluid {
-            transform: scale(0.8);
-            -ms-transform: scale(0.8);
-            -webkit-transform: scale(0.8); }
+          background-size: 50% auto; }
         .quick-menu ul > li > a > .details h5 {
           font-size: 18px;
           margin-top: 15px; } }
@@ -918,15 +923,17 @@ body {
       .quick-menu ul > li > a {
         display: block;
         overflow: hidden; }
-        .quick-menu ul > li > a > figure {
+        .quick-menu ul > li > a .quick-icon {
           float: left;
           width: 140px;
           height: 140px;
-          line-height: 138px; }
-          .quick-menu ul > li > a > figure .img-fluid {
-            transform: none;
-            -ms-transform: none;
-            -webkit-transform: none; }
+          background-size: auto auto;
+          /*line-height: 138px;
+          .img-fluid {
+              transform: none;
+              -ms-transform: none;
+              -webkit-transform: none;
+          }*/ }
         .quick-menu ul > li > a > .details {
           float: left;
           padding-top: 15px;
