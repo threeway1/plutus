@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean");
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,600,700,900&subset=korean");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0; }
@@ -370,11 +369,14 @@ a {
 body {
   position: relative;
   min-width: 320px;
-  max-width: 100%;
+  width: 100%;
   font-size: 13px;
   color: #666;
   font-weight: 400;
   font-family: 'Noto Sans KR', sans-serif; }
+  @media (min-width: 1230px) {
+    body {
+      font-size: 14px; } }
 
 /* 3way demo common */
 .blind {
@@ -420,20 +422,20 @@ body {
 .page-header {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 200px;
   color: #fff;
-  padding-top: 120px;
+  padding-top: 110px;
   text-align: center;
   background-image: url(/assets/images/sub/bg_page_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
   .page-header h3 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     font-family: 'Noto Serif KR', sans-serif; }
   .page-header p {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 10px;
     color: rgba(255, 255, 255, 0.6); }
   @media (min-width: 992px) {
@@ -488,6 +490,7 @@ body {
             top: 50%;
             right: 20px;
             margin: 0;
+            line-height: 12px;
             margin-top: -6px;
             border: 0;
             content: url(/assets/images/icon_down.png); }
@@ -594,6 +597,7 @@ body {
     #lnb > ul > li.active > a:after {
       position: absolute;
       top: 50%;
+      line-height: 6px;
       margin-top: -3px;
       right: 8px;
       /*position: relative;
@@ -604,19 +608,21 @@ body {
       opacity: 1; }
 
 section .section-header {
-  padding: 40px 0;
+  padding: 25px 0;
   text-align: center; }
   section .section-header h4 {
     font-size: 20px;
     color: #333;
     font-weight: 400; }
+    section .section-header h4 a {
+      color: inherit !important; }
   @media (min-width: 768px) {
     section .section-header {
       text-align: left;
       padding: 50px 0 40px; }
       section .section-header h4 {
         font-size: 30px; } }
-@media (min-width: 1230px) {
+@media (min-width: 1200px) {
   section {
     margin-left: -50px; } }
 section .section-content {
@@ -624,7 +630,6 @@ section .section-content {
   z-index: 2; }
 
 #content {
-  min-height: 600px;
   padding-bottom: 30px; }
   @media (min-width: 992px) {
     #content {

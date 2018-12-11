@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean");
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,600,700,900&subset=korean");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0; }
@@ -369,11 +368,14 @@ a {
 body {
   position: relative;
   min-width: 320px;
-  max-width: 100%;
+  width: 100%;
   font-size: 13px;
   color: #666;
   font-weight: 400;
   font-family: 'Noto Sans KR', sans-serif; }
+  @media (min-width: 1230px) {
+    body {
+      font-size: 14px; } }
 
 #header {
   position: fixed;
@@ -414,12 +416,9 @@ body {
       border-radius: 0;
       margin: 30px 0 31px;
       background: none; }
-      #header .container .btn.btn-nav, #header .container .btn.btn-sitemap {
-        /*float: left;*/ }
       #header .container .btn.search-open {
         position: relative;
-        z-index: 102;
-        /*float: right;*/ }
+        z-index: 102; }
       #header .container .btn.btn-sitemap {
         position: relative;
         z-index: 102;
@@ -474,7 +473,7 @@ body {
       #header .container .logo {
         width: 112px;
         margin: 25px 0;
-        margin-left: -65px; }
+        margin-left: -56px; }
       #header .container .btn {
         margin: 66px 0; }
         #header .container .btn.btn-sitemap {
@@ -500,7 +499,10 @@ body {
           #header .container #gnb > ul > li {
             display: inline-block;
             overflow: hidden;
-            vertical-align: top !important; }
+            vertical-align: top !important;
+            min-width: 100px; }
+            #header .container #gnb > ul > li:nth-of-type(2), #header .container #gnb > ul > li:nth-of-type(3) {
+              width: 295px; }
             #header .container #gnb > ul > li > a {
               position: relative;
               margin: 67px 35px 0;
@@ -558,6 +560,11 @@ body {
                 transition-delay: 0s; }
                 #header .container #gnb > ul > li > ul > li > a:hover {
                   color: #fff; } }
+  @media (min-width: 1230px) {
+    #header .contaoner #gnb > ul > li {
+      min-width: 155px; }
+      #header .contaoner #gnb > ul > li:nth-of-type(2), #header .contaoner #gnb > ul > li:nth-of-type(3) {
+        width: 300px; } }
 
 #header.gnb-open {
   /*height: 374px !important;*/
@@ -577,7 +584,7 @@ body {
     overflow: visible !important; }
   #header.gnb-open .logo {
     margin-top: 25px;
-    margin-left: -54px;
+    margin-left: -43px;
     z-index: 1; }
     #header.gnb-open .logo > a > img {
       width: 86px; }
@@ -606,7 +613,7 @@ body {
     border-bottom: 0; }
     .scrolled #header .logo {
       margin-top: 25px;
-      margin-left: -54px;
+      margin-left: -43px;
       z-index: 1; }
       .scrolled #header .logo > a > img {
         width: 86px; }
@@ -680,7 +687,7 @@ body {
       padding: 0 20px;
       border-bottom: 1px solid #e0e0e0; }
       #gnb-nav .gnb-wrap .gnb-body > ul > li > a:after {
-        margin-top: 19px;
+        /*margin-top: 19px;*/
         float: right;
         content: url(/assets/images/icon_up.jpg); }
     #gnb-nav .gnb-wrap .gnb-body > ul > li > ul {
@@ -757,6 +764,8 @@ body {
       #footer .foot-nav > ul > li:last-child:after {
         content: "";
         margin: 0; }
+      #footer .foot-nav > ul > li.privacy > a {
+        color: #fff; }
   #footer .information {
     margin-top: 15px; }
     #footer .information > ul > li {
@@ -801,6 +810,9 @@ body {
         font-size: 13px; }
         #footer .copyright a {
           display: inline-block; } }
+  @media (min-width: 992px) {
+    #footer .information {
+      padding-right: 100px; } }
   @media (min-width: 1230px) {
     #footer h2 img {
       width: auto; }
@@ -811,7 +823,7 @@ body {
   position: fixed;
   right: 10px;
   bottom: 60px;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   -webkit-transition-property: all;
   transition-property: all;
@@ -822,13 +834,14 @@ body {
   -webkit-transition-delay: 0s;
   transition-delay: 0s; }
   .quick-top > .btn-top {
+    position: relative;
     display: block;
     width: 40px;
     height: 40px;
+    line-height: 24px;
     font-size: 13px;
     color: #fff;
     text-align: center;
-    padding: 12px 0;
     border: 0;
     border-radius: 50%;
     background-color: #3e6dc2; }
@@ -836,6 +849,7 @@ body {
       color: #fff; }
   @media (min-width: 1430px) {
     .quick-top {
+      z-index: 1;
       width: 1400px;
       margin-right: -700px;
       right: 50%; }
@@ -843,7 +857,7 @@ body {
         float: right;
         width: 60px;
         height: 60px;
-        font-size: 16px;
-        padding: 20px 0; } }
+        line-height: 43px;
+        font-size: 16px; } }
 
 /*# sourceMappingURL=default.css.map */

@@ -41,6 +41,12 @@
       "css": "search",
       "code": 59397,
       "src": "websymbols"
+    },
+    {
+      "uid": "37f6cfbb4062ed0d01b351ec35c334ff",
+      "css": "right-open-mini",
+      "code": 59398,
+      "src": "entypo"
     }
   ]
 }

@@ -25,6 +25,7 @@ body {
 }
 .btn-more {
     position: relative;
+    left: 0;
     display: inline-block;
     font-weight: 300;
     padding: 0 30px 5px 0;
@@ -40,7 +41,10 @@ body {
         content: "";
         transform: rotate(50deg);
         background-color: #fff;
-        @include transition();
+    }
+    &:hover, &:focus {
+        color: inherit;
+        left: 20px;
     }
     @media(min-width: $md) {
         padding: 0 64px 10px 0;
@@ -71,7 +75,10 @@ body {
     border-radius: 0;
     background: none;
     ul {
+        overflow: hidden;
         .slick-slide {
+            float: left;
+            height: auto;
             outline: none;
             padding: 100px 0 80px;
             background-repeat: no-repeat;
@@ -82,22 +89,21 @@ body {
                 display: table;
                 text-align: center;
                 width: 100%;
-                height: 100%;
                 .details {
                     display: table-cell;
                     width: 100%;
-                    height: 100%;
                     color: #fff;
                     vertical-align: top;
                     small {
                         font-size: 14px;
                         font-weight: lighter;
-                        letter-spacing: 1px;
+                        letter-spacing: .2px;
                         display: block;
                         color: rgba(#fff, .8);
                     }
                     h4 {
                         font-size: 35px;
+                        letter-spacing: -.3px;
                         font-weight: bold;
                         font-style: italic;
                         @include noto-sr();
@@ -105,7 +111,7 @@ body {
                     .btn-area {
                         margin-top: 20px;
                         .btn-more {
-                            
+                            letter-spacing: -.5px;
                         }
                     }
                     figure {
@@ -162,9 +168,15 @@ body {
         width: 100%;
         text-align: center;
         .btn {
+            position: relative;
+            top: -20px;
             display: inline-block;
+            @include transition($duration: .5s);
             img {
                 width: 20px;
+            }
+            &.on {
+                top: 0;
             }
         }
     }
@@ -175,16 +187,16 @@ body {
                 .product-info {
                     .details {
                         small {
-                            font-size: 26px;
+                            font-size: 22px;
                         }
                         h4 {
-                            font-size: 72px;
+                            font-size: 62px;
                         }
                     }
                 }
             }
             .slick-dots {
-                bottom: 110px;
+                bottom: 130px;
             }
         }
         > .btn-scroll {
@@ -248,7 +260,7 @@ body {
         h4 {
             font-size: 20px;
             color: #29303b;
-            font-weight: bold;
+            font-weight: 600;
             @include noto-sr();
             small {
                 font-size: 14px;
@@ -256,6 +268,7 @@ body {
                 display: block;
                 margin-bottom: 5px;
                 @include noto-ss();
+                letter-spacing: -.5px;
             }
         }
         p {
@@ -265,13 +278,20 @@ body {
             line-height: 16px;
             margin-top: 10px;
             word-break: keep-all;
+            letter-spacing: -.5px;
         }
         .btn-area {
             margin-top: 20px;
             .btn-more {
+                font-weight: 400;
+                letter-spacing: -.5px;
                 color: #3e6dc2;
+                border-bottom: 2px solid #3e6dc2;
                 border-color: #3e6dc2;
                 &:after {
+                    bottom: 3px;
+                    right: -1px;
+                    height: 2px;
                     background-color: #3e6dc2;
                 }
             }
@@ -289,12 +309,12 @@ body {
             h4 {
                 font-size: 35px;
                 small {
-                    font-size: 26px;
+                    font-size: 23px;
                     margin-bottom: 10px;
                 }
             }
             p {
-                font-size: 19px;
+                font-size: 17px;
                 line-height: 28px;
                 margin-top: 10px;
             }
@@ -313,9 +333,10 @@ body {
         }
     }
     @media(min-width: $lg) {
+        padding-top: 90px;
         .section-header {
             h4 {
-                font-size: 50px;
+                font-size: 43px;
             }
         }
     }
@@ -361,7 +382,7 @@ body {
         h4 {
             font-size: 20px;
             color: #29303b;
-            font-weight: bold;
+            font-weight: 600;
             @include noto-sr();
             small {
                 font-size: 14px;
@@ -377,6 +398,7 @@ body {
             line-height: 16px;
             margin-top: 10px;
             word-break: keep-all;
+            letter-spacing: -.5px;
         }
         .product-slide {
             margin: 30px -4px 0;
@@ -384,7 +406,37 @@ body {
                 height: auto;
                 outline: none;
                 margin: 0 8px;
-                border: 1px solid #ddd;
+                a {
+                    position: relative;
+                    display: block;
+                    border: 1px solid #ddd;
+                    @include transition($duration: .25s);
+                    
+                    /*&:after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        content: "";
+                        opacity: 0;
+                        @include transition();
+                        border: 4px solid #3e6dc2;
+                    }*/
+                    &:hover {
+                        /*&:after {
+                            opacity: 1;
+                        }*/
+                        border: 4px solid #3e6dc2;
+                        figure {
+                            figcaption {
+                                h4 {
+                                    color: #3e6dc2;
+                                }
+                            }
+                        }
+                    }
+                }
                 figure {
                     .img-fluid {
                         width: 100%;
@@ -397,25 +449,30 @@ body {
                             font-weight: bold;
                             color: #333;
                             margin-bottom: 5px;
+                            @include noto-ss();
+                            @include transition();
                         }
                         dl {
                             overflow: hidden;
                             dt {
                                 font-size: 11px;
                                 color: #888;
-                                font-weight: 300;
+                                font-weight: 400;
                                 float: left;
                                 clear: both;
+                                letter-spacing: -.5px;
                                 &:after {
-                                    content: ">";
+                                    font-family: "fontello";
+                                    content: "\E806";
                                     margin: 0 5px;
                                 }
                             }
                             dd {
                                 font-size: 11px;
                                 color: #888;
-                                font-weight: 300;
+                                font-weight: 400;
                                 float: left;
+                                letter-spacing: -.5px;
                             }
                         }
                     }
@@ -433,18 +490,21 @@ body {
                 .btn-controls {
                     outline: none;
                     position: relative;
-                    z-index: 1;
+                    z-index: 2;
                     font-size: 16px;
                     color: #a9acb1;
                     cursor: pointer;
                     border: 0;
                     padding: 0;
                     background: none;
+                    @include transition();
+                    &:hover {
+                        color: #294382;
+                    }
                 }
             }
         }
     }
-
     @media(min-width: $md) {
         padding-top: 60px;
         .section-content {
@@ -456,8 +516,7 @@ body {
                 }
             }
             .summary {
-                font-size: 19px;
-                line-height: 28px;
+                font-size: 17px;
                 margin-top: 10px;
             }
             .product-list {
@@ -467,9 +526,6 @@ body {
     }
     @media(min-width: $lg) {
         .section-content {
-            h4 {
-                font-size: 50px;
-            }
             .product-slide {
                 .slick-slide {
                     figure {
@@ -523,15 +579,15 @@ body {
                 }
                 .btn-slick {
                     position: absolute;
-                    top: -100px;
+                    top: 50%;
                     &.btn-prev {
-                        left: 0;
+                        left: -80px;
                     }
                     &.btn-next {
-                        right: 0;
+                        right: -80px;
                     }
                     .btn-controls {
-                        font-size: 25px;
+                        font-size: 35px;
                     }
                 }
             }
@@ -592,6 +648,7 @@ body {
             dt {
                 font-size: 23px;
                 font-weight: 300;
+                letter-spacing: -.5px;
                 line-height: 34px;
                 padding: 0 40px 0 20px;
             }
@@ -602,8 +659,10 @@ body {
                 > a {
                     &.news-title {
                         font-size: 15px;
+                        letter-spacing: -.5px;
                         .date {
                             font-size: 14px;
+                            letter-spacing: 0;
                         }
                     }
                     &.more {
@@ -613,6 +672,7 @@ body {
                         line-height: 34px;
                         font-size: 14px;
                         color: #3e6dc2;
+                        letter-spacing: -.5px;
                         .icon-more {
                             position: relative;
                             top: 4px;
@@ -625,13 +685,6 @@ body {
                             background-size: auto auto;
                             background-repeat: no-repeat;
                             background-position: 22px 50%;
-                            /*line-height: 20px;*/
-                            /*padding-right: 8px;*/
-                            /*img {
-                                position: relative;
-                                top: -3px;
-                                display: inline-block;
-                            }*/
                         }
                     }
                 }
@@ -669,6 +722,7 @@ body {
                 display: block;
                 text-align: center;
                 .quick-icon {
+                    position: relative;
                     display: block;
                     width: 60px;
                     height: 60px;
@@ -680,22 +734,65 @@ body {
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
                     background-size: 60% auto;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        border: 2px solid #3e6dc2;
+                        opacity: 0;
+                        @include transition();
+                    }
                 }
                 > .details {
                     h5 {
                         font-size: 14px;
-                        font-weight: 300;
+                        font-weight: 400;
                         margin-top: 10px;
+                        letter-spacing: -.5px;
+                        @include transition();
                     }
                     p {
                         display: none;
+                        letter-spacing: -.5px;
                     }
                     .quick-link {
+                        position: relative;
                         display: none;
+                        padding-bottom: 5px;
+                        @include transition();
+                        &:after {
+                            position: absolute;
+                            bottom: 0;
+                            width: 0;
+                            left: 50%;
+                            content: "";
+                            border-bottom: 2px solid #3e6dc2;
+                            @include transition();
+                        }
                     }
                 }
-                &:hover, &:focus {
-                    color: inherit;
+                &:hover {
+                    .quick-icon {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                    > .details {
+                        h5 {
+                            color: #3e6dc2;
+                        }
+                        .quick-link {
+                            color: #3e6dc2;
+                            &:after {
+                                width: 100%;
+                                margin-left: -50%;
+                            }
+                        }
+                    }
                 }
             }
             &:nth-of-type(1) {
@@ -708,7 +805,11 @@ body {
             &:nth-of-type(2) {
                 > a {
                     .quick-icon {
+                        background-size: 65% auto;
                         background-image: url(/assets/images/main/icon_quick02.png);
+                        @media(min-width: $xl) {
+                            background-size: auto auto;
+                        }
                     }
                 }
             }
@@ -780,9 +881,10 @@ body {
                             margin-top: 15px;
                         }
                         .quick-link {
-                            display: block;
+                            display: inline-block;
                             font-size: 14px;
                             color: #999;
+                            letter-spacing: -.5px;
                             margin-top: 20px;
                         }
                     }
@@ -803,6 +905,11 @@ body {
     }
 }
 
+.quick-top {
+    .btn {
+        padding: 6px 0;
+    }
+}
 
 
 
@@ -820,4 +927,12 @@ body {
 
 
 
-
+.pro_in a:hover{
+    
+}
+.pro_in a:hover > h5{
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}

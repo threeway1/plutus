@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean");
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,600,700,900&subset=korean");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0; }
@@ -369,10 +368,13 @@ a {
 body {
   position: relative;
   min-width: 320px;
-  max-width: 100%;
+  width: 100%;
   font-size: 13px;
   color: #666;
   font-weight: 400;
   font-family: 'Noto Sans KR', sans-serif; }
+  @media (min-width: 1230px) {
+    body {
+      font-size: 14px; } }
 
 /*# sourceMappingURL=common.css.map */

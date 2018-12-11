@@ -35,13 +35,9 @@
             border-radius: 0;
             margin: 30px 0 31px;
             background: none;
-            &.btn-nav, &.btn-sitemap {
-                /*float: left;*/
-            }
             &.search-open {
                 position: relative;
                 z-index: 102;
-                /*float: right;*/
             }
             &.btn-sitemap {
                 position: relative;
@@ -124,7 +120,7 @@
             .logo {
                 width: 112px;
                 margin: 25px 0;
-                margin-left: -65px;
+                margin-left: -56px;
             }
             .btn {
                 margin: 66px 0;
@@ -152,6 +148,10 @@
                         display: inline-block;
                         overflow: hidden;
                         vertical-align: top !important;
+                        min-width: 100px;
+                        &:nth-of-type(2), &:nth-of-type(3) {
+                            width: 295px;
+                        }
                         > a {
                             position: relative;
                             margin: 67px 35px 0;
@@ -207,6 +207,20 @@
             }
         }
     }
+    @media(min-width: $xl) {
+        .contaoner {
+            #gnb {
+                > ul {
+                    > li {
+                        min-width: 155px;
+                        &:nth-of-type(2), &:nth-of-type(3) {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 #header.gnb-open {
@@ -229,7 +243,7 @@
     }
     .logo {
         margin-top: 25px;
-        margin-left: -54px;
+        margin-left: -43px;
         z-index: 1;
         > a {
             > img {
@@ -275,7 +289,7 @@
             border-bottom: 0;
             .logo {
                 margin-top: 25px;
-                margin-left: -54px;
+                margin-left: -43px;
                 z-index: 1;
                 > a {
                     > img {
@@ -364,7 +378,7 @@
                         padding: 0 20px;
                         border-bottom: 1px solid #e0e0e0;
                         &:after {
-                            margin-top: 19px;
+                            /*margin-top: 19px;*/
                             float: right;
                             content: url(/assets/images/icon_up.jpg);
                         }
@@ -466,6 +480,11 @@
                         margin: 0;
                     }
                 }
+                &.privacy {
+                    > a {
+                        color: #fff;
+                    }
+                }
             }
         }
     }
@@ -537,6 +556,11 @@
             }
         }
     }
+    @media(min-width: $lg) {
+        .information {
+            padding-right: 100px;
+        }
+    }
     @media(min-width: $xl) {
         h2 {
             img {
@@ -554,17 +578,18 @@
     position: fixed;
     right: 10px;
     bottom: 60px;
-    z-index: 1;
+    z-index: 2;
     opacity: 0;
     @include transition();
     > .btn-top {
+        position: relative;
         display: block;
         width: 40px;
         height: 40px;
+        line-height: 24px;
         font-size: 13px;
         color: #fff;
         text-align: center;
-        padding: 12px 0;
         border: 0;
         border-radius: 50%;
         background-color: #3e6dc2;
@@ -573,6 +598,7 @@
         }
     }
     @media(min-width: 1430px) {
+        z-index: 1;
         width: 1400px;
         margin-right: -700px;
         right: 50%;
@@ -580,8 +606,8 @@
             float: right;
             width: 60px;
             height: 60px;
+            line-height: 43px;
             font-size: 16px;
-            padding: 20px 0;
         }
     }
 }

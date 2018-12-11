@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,600,700,900&subset=korean');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
 $md: "768px";
 $lg: "992px";
@@ -23,9 +22,7 @@ $xl: "1230px";
 @mixin noto-sr() {
     font-family: 'Noto Serif KR', sans-serif;
 }
-@mixin roboto() {
-    font-family: 'Roboto', sans-serif;
-}
+
 
 h1, h2, h3,h4, h5, h6 {
     margin-top: 0;
@@ -133,9 +130,12 @@ a {
 body {
     position: relative;
     min-width: 320px;
-    max-width: 100%;
+    width: 100%;
     font-size: 13px;
     color: #666;
     font-weight: 400;
     @include noto-ss();
+    @media(min-width: $xl) {
+        font-size: 14px;
+    }
 }

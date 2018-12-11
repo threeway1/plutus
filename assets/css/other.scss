@@ -5,3 +5,44 @@
         background-image: url(/assets/images/other/bg_page_header.jpg);
     }
 }
+
+/******** 사이트맵 ********/
+.sitemap_cont{overflow:hidden; clear:both;}
+.sitemap_cont dl{float:left; width:23.5%; margin:0 2% 3% 0}
+.sitemap_cont dl:nth-child(4n) {margin-right:0;}
+.sitemap_cont dt{border-top:1px solid #333; text-align:center; color:#444; font-size:17px; padding:14px 0 ; margin-bottom:10px; border-bottom:1px solid #bbb; letter-spacing:-0.5pt; font-weight:600} 
+.sitemap_cont dd {font-size:14px; padding:6px 0; text-align:center; letter-spacing:-0.5pt;}
+.sitemap_cont dd:last-child{border-bottom:1px solid #ddd; padding:4px 0 15px 0}
+.sitemap_cont dd a{letter-spacing:-0.5pt; padding:0 5px; box-sizing:border-box; transition:all 0.3s;}
+.sitemap_cont dd a:hover{color:#3e6dc2; transition:all 0.3s;}
+
+/* 이용약관, 개인정보취급방침 */
+.policy_con{position:relative; overflow:hidden; letter-spacing:-0.5pt; line-height:160%}
+p.policy_top {letter-spacing:-0.5pt; line-height:160%; margin-bottom:10px;}
+p.policy_top:nth-child(2) { margin-bottom:18px;}
+.cont_title{font-size:24px; color:#333; padding-bottom:18px; letter-spacing:-1.2pt; }
+p.cont_tit {display:block; font-size:18px; padding-bottom:5px; color:#333; letter-spacing:-0.5pt; font-weight:bold}
+.cont_txt { letter-spacing:-0.5pt; line-height:160%}
+.cont_txt2 {padding-bottom:35px; letter-spacing:-0.5pt; line-height: 160%;}
+.cont_box { padding:20px; background:#f4f4f4; margin:7px 0px 32px 0px; display:block;  letter-spacing:-0.5pt; line-height:160%}
+.cont_box.last {margin-bottom:0;}
+.cont_box strong {font-weight:normal; color:#333; letter-spacing:-0.5pt; display:inline-block; margin-bottom:3px; line-height:100%}
+p.contin_txt {margin-bottom:12px; line-height:140%;}
+
+.privacy_list {width:91%; overflow:hidden; clear:both; *zoom:1; padding:4% 4% 3% 4%; border:1px dashed #ddd; margin-bottom:30px; letter-spacing:-0.5pt;}
+.privacy_list li {width:49%; float:left; padding-bottom:1%; }
+.privacy_list li a {letter-spacing:-0.5pt;} 
+
+/*******************************************************************************
+	@media ~640px
+*******************************************************************************/
+@media all and (max-width:640px){
+
+/******** 사이트맵 ********/
+.sitemap_cont dl{width:47%; margin:0 4% 3% 0}
+.sitemap_cont dl:nth-child(4n) {margin-right:0;}
+.sitemap_cont dl:nth-child(2n) {margin-right:0;}
+.sitemap_cont dt{font-size:15px;} 
+.sitemap_cont dd {font-size:13px;}
+
+}

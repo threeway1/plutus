@@ -33,6 +33,7 @@
             ]
         });
     });
+    
     // btn-scroll
     $(function(){
         var winH = $(window).height();
@@ -41,4 +42,12 @@
             return false;
         });
     });
+    
+    // scroll event
+    $(window).load(function(){
+        setInterval(function(){
+            $('.btn-scroll .btn').toggleClass('on');
+        }, 500);
+    });
+    
 })(jQuery);
