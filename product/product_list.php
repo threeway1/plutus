@@ -33,5 +33,25 @@
     
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/inc/footer.php'); ?>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/inc/docfoot.php'); ?>
+    <script>
+        (function($){
+            $(document).on('click','#lnb > ul > li > a', function(){
+                if ($(this).parent().hasClass('active')) {
+                    $(this).parent().removeClass('active');
+                } else {
+                    $(this).parent().siblings('.active').removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+            });
+            $(document).on('click','#lnb > ul > li > ul > li > a', function(){
+                if ($(this).parent().hasClass('on')) {
+                    $(this).parent().removeClass('on');
+                } else {
+                    $(this).parent().siblings('.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                }
+            });
+        })(jQuery);
+    </script>
 </body>
 </html>

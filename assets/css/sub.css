@@ -591,6 +591,32 @@ body {
     #lnb > ul > li > a:hover {
       color: #3e6dc2;
       opacity: .7; }
+  #lnb > ul > li > ul {
+    display: none;
+    width: 200px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f2f2f2; }
+    #lnb > ul > li > ul > li > a {
+      font-size: 14px;
+      color: #777;
+      line-height: 26px;
+      font-weight: 400;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s; }
+      #lnb > ul > li > ul > li > a:hover {
+        opacity: .7;
+        color: #3e6dc2; }
+    #lnb > ul > li > ul > li.on a {
+      color: #3e6dc2; }
+      #lnb > ul > li > ul > li.on a:hover {
+        opacity: 1; }
   #lnb > ul > li.active > a {
     position: relative;
     color: #3e6dc2; }
@@ -606,6 +632,8 @@ body {
       content: url(/assets/images/sub/snb_icon_right.png); }
     #lnb > ul > li.active > a:hover {
       opacity: 1; }
+  #lnb > ul > li.active > ul {
+    display: block; }
 
 section .section-header {
   padding: 25px 0;

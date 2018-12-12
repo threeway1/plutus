@@ -8,7 +8,8 @@
     <!-- jumbotron -->
     <div class="jumbotron">
         <ul>
-            <li style="background-image: url(/assets/images/main/jumbo_slide01.jpg);">
+            <li>
+                <div class="bg-backdrop" style="background-image: url(/assets/images/main/jumbo_slide01.jpg);"></div>
                 <div class="product-info">
                     <div class="details">
                         <small>Micro Analytical Balances</small>
@@ -22,7 +23,8 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/assets/images/main/jumbo_slide02.jpg);">
+            <li>
+                <div class="bg-backdrop" style="background-image: url(/assets/images/main/jumbo_slide02.jpg);"></div>
                 <div class="product-info">
                     <div class="details">
                         <small>Weighing Controller</small>
@@ -36,7 +38,8 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/assets/images/main/jumbo_slide03.jpg);">
+            <li>
+                <div class="bg-backdrop" style="background-image: url(/assets/images/main/jumbo_slide03.jpg);"></div>
                 <div class="product-info">
                     <div class="details">
                         <small>Production Weighing System</small>
@@ -50,7 +53,8 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/assets/images/main/jumbo_slide04.jpg);">
+            <li>
+                <div class="bg-backdrop" style="background-image: url(/assets/images/main/jumbo_slide04.jpg);"></div>
                 <div class="product-info">
                     <div class="details">
                         <small>Rotary Viscometer</small>
@@ -64,7 +68,8 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/assets/images/main/jumbo_slide05.jpg);">
+            <li>
+                <div class="bg-backdrop" style="background-image: url(/assets/images/main/jumbo_slide05.jpg);"></div>
                 <div class="product-info">
                     <div class="details">
                         <small>Temperature &amp; Humidity Chamber</small>
@@ -272,5 +277,20 @@
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/inc/docfoot.php'); ?>
     <script type="text/javascript" src="/assets/slick/slick.min.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script>
+        (function($){
+            $('.jumbotron ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
+                $('.slick-slide').removeClass('action');
+                setTimeout(function (){ 
+                    $('.slick-active').addClass('action'); 
+                });
+            });
+            $('.jumbotron ul').on('init', function(event,slick){
+                setTimeout(function(){ 
+                    $('.slick-active').addClass('action'); 
+                });
+            });
+        })(jQuery);
+    </script>
 </body>
 </html>

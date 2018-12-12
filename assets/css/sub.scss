@@ -217,6 +217,34 @@
                     opacity: .7;
                 }
             }
+            > ul {
+                display: none;
+                width: 200px;
+                border-bottom: 1px solid #ddd;
+                padding: 20px;
+                background-color: #f2f2f2;
+                > li {
+                    > a {
+                        font-size: 14px;
+                        color: #777;
+                        line-height: 26px;
+                        font-weight: 400;
+                        @include transition();
+                        &:hover {
+                            opacity: .7;
+                            color: #3e6dc2;
+                        }
+                    }
+                    &.on {
+                        a {
+                            color: #3e6dc2;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
             &.active {
                 > a {
                     position: relative;
@@ -235,6 +263,9 @@
                     &:hover {
                         opacity: 1;
                     }
+                }
+                > ul {
+                    display: block;
                 }
             }
         }
