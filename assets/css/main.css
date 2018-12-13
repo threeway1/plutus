@@ -452,6 +452,7 @@ body {
   .jumbotron ul {
     overflow: hidden; }
     .jumbotron ul .slick-slide {
+      position: relative;
       float: left;
       height: auto;
       outline: none;
